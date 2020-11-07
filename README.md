@@ -25,3 +25,14 @@ Raw markdown file on GitHub:
 Rendering result: 
 
 <img src="https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1">
+
+# How to use it
+
+1. Create new template in StackEdit Publish to GitHub window, e.g. 
+
+2. Paste the content of Value.js into Value windows.
+
+3. Paste the content of Helpers.js into Helpers window. 
+
+4. Click OK.
+
