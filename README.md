@@ -4,23 +4,23 @@ A custom style for publishing StackEdit notes on GitHub as markdown files with L
 
 LaTeX formulas within STackEdit notes should be written as usual, i.e. between single or double dollar signs. All characters between dollar signs will be automatically replaced by the following HTML element:
 
-``
+```html
 <img src="https://render.githubusercontent.com/render/math?math=YOUR FORMULA GOES HERE">
-``
+```
 
 Example:
 
 Markdown note in StackEdit: 
 
-``latex
+```latex
 $x_1 + 2 + \frac{1}{2}$
-``
+```
 
 Raw markdown file on GitHub: 
 
-``html
+```html
 <img src="https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1">
-``
+```
 
 Rendering result: 
 
