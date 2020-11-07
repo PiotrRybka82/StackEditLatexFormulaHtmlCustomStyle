@@ -30,9 +30,15 @@ Rendering result:
 
 1. Create new template in StackEdit Publish to GitHub window, e.g. 
 
+![](https://github.com/PiotrRybka82/StackEditLatexFormulaHtmlCustomStyle/blob/main/Create_template.PNG)
+
 2. Paste the content of Value.js into Value windows.
 
+![](https://github.com/PiotrRybka82/StackEditLatexFormulaHtmlCustomStyle/blob/main/Value.PNG)
+
 3. Paste the content of Helpers.js into Helpers window. 
+
+![](https://github.com/PiotrRybka82/StackEditLatexFormulaHtmlCustomStyle/blob/main/Helpers.PNG)
 
 4. Click OK.
 
