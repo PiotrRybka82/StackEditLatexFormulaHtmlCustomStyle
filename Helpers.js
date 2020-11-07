@@ -1,12 +1,15 @@
 Handlebars.registerHelper('replace', function(options) {
     var string = options.fn(this);
 
+	var textSize = '300px';
+	var largerTextSize = '400px';
 	var dollar = "$";
 	var doubleDollar = "$$";
-	var begin = '<img src="https://render.githubusercontent.com/render/math?math=';
+	var begin = `<img style="min-width: ${textSize};" src="https://render.githubusercontent.com/render/math?math=`;
+	var beginCentered = `<img style="min-width: ${largerTextSize}; display: block; margin-left: auto; margin-right: auto;" src="https://render.githubusercontent.com/render/math?math=`;
 	var end = '">';
 
-	string = CorrectFormula(string, doubleDollar, begin, end);
+	string = CorrectFormula(string, doubleDollar, beginCentered, end);
 	string = CorrectFormula(string, dollar, begin, end);
 
     return string;
@@ -35,7 +38,7 @@ function CorrectFormula(text, delimiter, beginStr, endStr) {
 
 	for (let i = 0; i <= text.length - delimiter.length; i++) {
 
-			const item = text.substr(i, delimiter.length);
+		const item = text.substr(i, delimiter.length);
 		const char = text.substr(i, 1);
 	 
 		if (item.length === delimiter.length && item === delimiter && !insideFormula) {
@@ -45,8 +48,10 @@ function CorrectFormula(text, delimiter, beginStr, endStr) {
 			
 			continue;
 		} else if (item.length === delimiter.length && item === delimiter && insideFormula) {    
-			insideFormula = false;            
+			
 			text = text.replace(delimiter + buffer + delimiter, beginStr + buffer + endStr);
+
+			insideFormula = false; 
 			buffer = '';
 			
 			if (delimiter.length > 1) i += delimiter.length - 1;
@@ -66,4 +71,3 @@ function CorrectFormula(text, delimiter, beginStr, endStr) {
   
 	return text;
 }
-
