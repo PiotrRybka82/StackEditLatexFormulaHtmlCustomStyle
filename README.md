@@ -1,4 +1,4 @@
-# StackEditLatexFormulaHtmlCustomStyle
+# StackEdit custom style enabling proper rendering of Latex formulas in GitHub
 
 A custom style for publishing StackEdit notes on GitHub as markdown files with LaTeX formulas rendered automatically as graphics.
 
